@@ -12,7 +12,7 @@ export const locationGeneric: LocationPost = {
   schedule:    '123213',
   urlImage:    'url de la image',
   urlLocation: 'url de google Maps',
-  user: 'Valen'
+
 };
 
 
@@ -36,5 +36,5 @@ export interface LocationPost {
   schedule:    string;
   urlImage:    string;
   urlLocation: string;
-  user:       string;
+
 }

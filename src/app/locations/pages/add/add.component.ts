@@ -29,7 +29,7 @@ export class AddComponent implements OnInit {
     division: '',
     urlImage: '',
     urlLocation: '',
-    user: '61fbeba51f1e8012bae64759'
+
   };
   constructor(private divisionService:DivisionService, private LocationService:LocationService) {
     this.divisionService.getDivisions().subscribe( resp => {
@@ -47,7 +47,7 @@ export class AddComponent implements OnInit {
     }
     this.divisions.forEach(({name, _id}) => {
       if(name === this.divisionName){
-          this.location.division = _id        
+          this.location.division = _id
       }
     })
     this.LocationService.addLocation(this.location).subscribe(console.log)

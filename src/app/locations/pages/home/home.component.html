@@ -29,7 +29,8 @@
       <mat-icon> menu </mat-icon>
     </button>
     <span class="spacer"></span>
-    <button mat-icon-button routerLink="/auth">
+    <h2>{{user.name}}</h2>
+    <button mat-icon-button (click)="logout()">
       <mat-icon> logout</mat-icon>
     </button>
   </mat-toolbar>
