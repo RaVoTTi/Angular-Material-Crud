@@ -9,6 +9,8 @@ import { SearchComponent } from './pages/search/search.component';
 import { LocationComponent } from './pages/location/location.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MaterialModule } from '../material/material.module';
+import { CardLocationComponent } from './components/card-location/card-location.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,11 +20,13 @@ import { MaterialModule } from '../material/material.module';
     AddComponent,
     SearchComponent,
     LocationComponent,
-    HomeComponent
+    HomeComponent,
+    CardLocationComponent
   ],
   imports: [
     CommonModule,
     LocationRoutingModule,
+    FormsModule,
     MaterialModule,
     FlexLayoutModule
   ]

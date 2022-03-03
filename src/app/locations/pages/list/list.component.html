@@ -1,35 +1,15 @@
 
 <div fxLayout="row wrap"
-  fxLayoutAlign="center"
+fxLayout.xs="column"
+  fxLayoutAlign="start strech"
   fxLayoutGap="10px"
 
+
 >
-<div fxFlex="20"  fxFlex.lg="15"  fxFlex.sm="30" *ngFor="let location of locations">
+<div fxFlex.lg="20"  fxFlex.sm="30" *ngFor="let location of locations">
 
+<app-card-location [location]="location"></app-card-location>
 
-  <mat-card >
-    <mat-card-header>
-      <mat-card-title>
-      {{location.title}}
-    </mat-card-title>
-    <mat-card-subtitle>
-      {{location.division?.name}}
-    </mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src={{location.urlImage}} alt={{location.title}}>
-  <mat-card-content>
-    <p>
-      {{location.description}}
-    </p>
-  </mat-card-content>
-
-  <mat-card-actions>
-    <button mat-flat-button color="primary"> Mas ..</button>
-    <button mat-flat-button color="accent">Editar </button>
-
-  </mat-card-actions>
-
-</mat-card>
 </div>
 
 </div>

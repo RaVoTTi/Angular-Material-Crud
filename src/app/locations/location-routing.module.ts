@@ -20,10 +20,6 @@ const routes: Routes = [
         component: AddComponent,
       },
       {
-        path: 'hero/:id',
-        component: LocationComponent,
-      },
-      {
         path: 'list',
         component: ListComponent,
       },
@@ -31,10 +27,15 @@ const routes: Routes = [
         path: 'search',
         component: SearchComponent,
       },
+      
+      {
+        path: ':id',
+        component: LocationComponent,
+      },
       {
         path: '**',
-        redirectTo: 'list'
-      }
+        redirectTo: 'list',
+      },
     ],
   },
 ];
