@@ -1,3 +1,4 @@
+import { UserLogin } from './../../../interfaces/auth.intreface';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
@@ -5,16 +6,30 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styles: [],
+  styles: [
+    `.container{
+      padding: 10px
+    }
+    `
+  ],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   constructor(private router: Router, private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  userLogin : UserLogin = {
+    email: '',
+    password: ''
+  }
 
   login() {
 
-    this.authService.login().subscribe((resp) =>{
+    if ( this.userLogin.email.trim().length <= 0){
+      return
+    }
+    if ( this.userLogin.password.trim().length <= 0){
+      return
+    }
+    this.authService.login(this.userLogin).subscribe((resp) =>{
       if(resp.user){
           this.router.navigate(['./location']);
 

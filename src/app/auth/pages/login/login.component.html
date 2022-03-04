@@ -1,7 +1,28 @@
-<mat-grid-list cols="1">
-  <mat-grid-tile>
-    <button mat-raised-button
-            (click)="login()"
-            color="primary">Ingresar</button>
-  </mat-grid-tile>
-</mat-grid-list>
+<mat-card >
+  <mat-card-header>
+    <mat-card-title>
+    MuniCRUD
+  </mat-card-title>
+  
+</mat-card-header>
+
+<mat-card-content>
+  <div fxFlex="100" fxLayout="column">
+  <mat-form-field fxFlex="100">
+    <mat-label> Email</mat-label>
+    <input matInput type="text" required  />
+  </mat-form-field>
+  <mat-form-field fxFlex="100">
+    <mat-label> Password</mat-label>
+    <input matInput type="password" required  />
+  </mat-form-field>
+</div>
+</mat-card-content>
+
+<mat-card-actions>
+  <button mat-flat-button color="primary"> Mas ..</button>
+  <button mat-flat-button color="accent">Editar </button>
+
+</mat-card-actions>
+
+</mat-card>

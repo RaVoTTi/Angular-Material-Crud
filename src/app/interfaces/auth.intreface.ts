@@ -12,6 +12,11 @@ export interface RESTAuth {
   user:  User;
   token: string;
 }
+export interface UserLogin {
+  email:   string;
+  password:  string;
+}
+
 
 export interface User {
   name:   string;

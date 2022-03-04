@@ -1,3 +1,4 @@
+import { UserLogin } from './../../interfaces/auth.intreface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
@@ -25,9 +26,9 @@ export class AuthService {
     return this._token!
   }
 
-  login(): Observable<RESTAuth> {
+  login(userLogin : UserLogin): Observable<RESTAuth> {
     return this.http
-      .post<RESTAuth>(`${this._apiUrl}/auth/login`, this._login)
+      .post<RESTAuth>(`${this._apiUrl}/auth/login`, userLogin)
       .pipe(tap((resp) => {
         this._user = resp.user
         this._token = resp.token
