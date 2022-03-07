@@ -23,13 +23,13 @@ export class LoginComponent {
 
   login() {
 
-    if ( this.userLogin.email.trim().length <= 0){
-      return
-    }
-    if ( this.userLogin.password.trim().length <= 0){
-      return
-    }
-    this.authService.login(this.userLogin).subscribe((resp) =>{
+    // if ( this.userLogin.email.trim().length <= 0){
+    //   return
+    // }
+    // if ( this.userLogin.password.trim().length <= 0){
+    //   return
+    // }
+    this.authService.login().subscribe((resp) =>{
       if(resp.user){
           this.router.navigate(['./location']);
 

@@ -9,9 +9,6 @@ import { LocationComponent } from './pages/location/location.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardLocationComponent } from './components/card-location/card-location.component';
 import { FormsModule } from '@angular/forms';
-import { InputsComponent } from './components/inputs/inputs.component';
-
-
 
 @NgModule({
   declarations: [
@@ -21,12 +18,7 @@ import { InputsComponent } from './components/inputs/inputs.component';
     LocationComponent,
     HomeComponent,
     CardLocationComponent,
-    InputsComponent
   ],
-  imports: [
-    CommonModule,
-    LocationRoutingModule,
-    FormsModule,
-  ]
+  imports: [CommonModule, LocationRoutingModule, FormsModule],
 })
-export class LocationModule { }
+export class LocationModule {}

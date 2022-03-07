@@ -26,9 +26,9 @@ export class AuthService {
     return this._token!
   }
 
-  login(userLogin : UserLogin): Observable<RESTAuth> {
+  login(): Observable<RESTAuth> {
     return this.http
-      .post<RESTAuth>(`${this._apiUrl}/auth/login`, userLogin)
+      .post<RESTAuth>(`${this._apiUrl}/auth/login`, this._login)
       .pipe(tap((resp) => {
         this._user = resp.user
         this._token = resp.token

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './auth/guards/auth.guard';
-import { ErrPageComponent } from './shared/err-page/err-page.component';
+import { AuthGuard } from './shared/guards/auth.guard';
+import { ErrPageComponent } from './404/err-page.component';
 
 
 const routes: Routes = [
@@ -12,6 +12,11 @@ const routes: Routes = [
   {
     path: 'location',
     loadChildren: () => import('./locations/location.module').then(m => m.LocationModule),
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'division',
+    loadChildren: () => import('./divisions/division.module').then(m => m.DivisionModule),
     canLoad: [AuthGuard]
   },
   {
